@@ -84,6 +84,32 @@ nav a {
 nav a:hover {
   color: var(--rosa-escuro);
 }
+/* Icone instagram*/
+.instagram-link {
+  color: #E1306C; /* cor padrão do Instagram */
+  font-size: 30px; /* tamanho do ícone */
+  text-decoration: none;
+  transition: transform 0.3s ease;
+}
+
+.instagram-link:hover {
+  transform: scale(1.2);
+  color: #C13584;
+}
+
+/* Icone Whatsapp */
+.whatsapp-link {
+  color: #25D366; /* verde do WhatsApp */
+  font-size: 30px; /* tamanho do ícone */
+  text-decoration: none;
+  transition: transform 0.3s ease;
+}
+
+.whatsapp-link:hover {
+  transform: scale(1.2);
+  color: #128C7E;
+}
+
 
 /* ==========================
    Hero Section
