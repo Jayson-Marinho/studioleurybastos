@@ -1,0 +1,227 @@
+/* ==========================
+   Fonte moderna
+========================== */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap');
+
+:root {
+  --rosa-claro: #ffe4ec;
+  --rosa-escuro: #d6336c;
+  --cinza: #444;
+  --branco: #fff;
+  --fundo: #fffafa;
+}
+
+/* ==========================
+   Reset e base
+========================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  background: var(--fundo);
+  color: var(--cinza);
+  line-height: 1.6;
+}
+
+/* ==========================
+   Containers
+========================== */
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* ==========================
+   Cabeçalho e Navegação
+========================== */
+header {
+  background: var(--branco);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.logo {
+  font-style: italic;
+  font-family: "Times New Roman", Times, serif;
+  font-weight: 600;
+  font-size: 1.5rem;
+  color: var(--rosa-escuro);
+  text-decoration: none;
+}
+
+.logo:hover {
+  color: var(--rosa-escuro);
+  opacity: 0.8;
+}
+
+
+.logo span {
+  color: var(--cinza);
+}
+
+nav a {
+  color: var(--cinza);
+  margin-left: 20px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+nav a:hover {
+  color: var(--rosa-escuro);
+}
+
+/* ==========================
+   Hero Section
+========================== */
+.hero {
+  background: linear-gradient(rgba(255, 228, 236, 0.5), rgba(255, 228, 236, 0.5)), 
+              url('pages/hero.jpg') no-repeat center center;
+  background-size: cover;
+  text-align: center;
+  padding: 100px 10px;
+  color: #292828;
+}
+
+.hero h2 {
+  font-size: 3.5rem;
+  font-style: italic;
+  font-family: "Times New Roman", Times, serif;
+  margin-bottom: 10px;
+}
+
+.hero p {
+  font-size: 1.2rem;
+}
+
+/* ==========================
+   Seções gerais
+========================== */
+section {
+  padding: 60px 20px;
+}
+
+h2 {
+  font-style: italic;
+  font-family: "Times New Roman", Times, serif;
+  text-align: center;
+  margin-bottom: 30px;
+  color: var(--rosa-escuro);
+}
+
+/* ==========================
+   Galeria
+========================== */
+.galeria-grid {
+  display: grid;
+  gap: 15px;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+}
+
+.galeria-grid img {
+  width: 100%;
+  border-radius: 8px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+}
+
+.galeria-grid img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+}
+
+/* ==========================
+   Blog
+========================== */
+.posts {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+}
+
+.post {
+  display: block;
+  background: #fff;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  text-decoration: none;
+  color: inherit;
+}
+
+.post:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+}
+
+.post h3 {
+  color: var(--rosa-escuro);
+  margin-bottom: 10px;
+}
+
+/* ==========================
+   Contato
+========================== */
+.contato {
+  text-align: center;
+}
+
+button {
+  background: var(--rosa-escuro);
+  color: white;
+  padding: 12px 25px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.2s ease;
+}
+
+button:hover {
+  background: #a91d4f;
+  transform: scale(1.05);
+}
+
+/* ==========================
+   Rodapé
+========================== */
+footer {
+  background: var(--rosa-claro);
+  text-align: center;
+  padding: 30px 20px;
+  font-size: 0.9rem;
+  color: var(--cinza);
+}
+
+/* ==========================
+   Responsividade
+========================== */
+@media (max-width: 768px) {
+  .hero h2 {
+    font-size: 2.2rem;
+  }
+
+  nav a {
+    margin-left: 10px;
+    font-size: 0.95rem;
+  }
+
+  .container {
+    padding: 15px;
+  }
+}
